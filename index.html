@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assetes/css/style.css" />
+  <title>Cruds</title>
+</head>
+
+<body>
+  <div class="crud">
+    <div class="head">
+      <h2>Crud<span>s.</span></h2>
+      <p>Product <span>Management</span> System<span>..</span></p>
+      <div class="dots-container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+
+    <div class="inputs">
+      <input type="text" id="title" placeholder="Title" />
+      <div class="price">
+        <input onkeyup="getTotal()" type="number" id="price" placeholder="Price" />
+        <input onkeyup="getTotal()" type="number" id="taxes" placeholder="Taxes" />
+        <input onkeyup="getTotal()" type="number" id="ads" placeholder="Ads" />
+        <input onkeyup="getTotal()" type="number" id="discount" placeholder="Discount" />
+        <small id="total"></small>
+      </div>
+      <input type="number" id="count" placeholder="Count" />
+      <input type="text" id="category" placeholder="Category" />
+      <button id="submit" class="submit">Create</button>
+    </div>
+
+    <div class="outputs">
+      <div class="searchBlock">
+        <input type="text" id="search" placeholder="Search" />
+        <div class="btnSearch">
+          <button id="searchTitle">Search By Title</button>
+          <button id="searchCategory">Search By Category</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="deleteAll"></div>
+
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Taxes</th>
+        <th>Ads</th>
+        <th>Discount</th>
+        <th>Count</th>
+        <th>Total</th>
+        <th>Category</th>
+        <th>Updata</th>
+        <th>Delete</th>
+      </tr>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <script src="./assetes/js/main.js"></script>
+</body>
+
+</html>
